@@ -82,6 +82,10 @@
           "contextPath": "/datahubadapter"
         },
         {
+          "name": "mycustomestorefront",
+          "contextPath": "/yacceleratorstorefront/?site=electronics"
+        },
+        {
           "name": "oauth2",
           "contextPath": "/authorizationserver"
         }
