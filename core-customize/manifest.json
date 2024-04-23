@@ -8,6 +8,10 @@
   ],
   "enableImageProcessingService": true,
   "extensions": [
+          "modeltacceleratorservices",
+		      "electronicsstore",
+		      "yacceleratorstorefront",
+		      "backoffice"
   ],
   "useConfig": {
     "properties": [
@@ -82,14 +86,49 @@
           "contextPath": "/datahubadapter"
         },
         {
-          "name": "mycustomestorefront",
-          "contextPath": "/yacceleratorstorefront/?site=electronics"
-        },
-        {
           "name": "oauth2",
           "contextPath": "/authorizationserver"
         }
       ]
+    },
+    {
+      "name": "accstorefront",
+      "properties": [
+        {
+          "key": "spring.session.enabled",
+					"value": "true"
+        },
+        {
+          "key": "spring.session.yacceleratorstorefront.save",
+					"value": "async"
+        },
+        {
+          "key": "spring.session.yacceleratorstorefront.cookie.name",
+					"value": "JSESSIONID"
+        },
+        {
+          "key": "spring.session.yacceleratorstorefront.cookie.path",
+					"value": "/"
+        },
+        {
+          "key": "storefrontContextRoot",
+					"value": ""
+        }
+      ],
+      "webapps": [
+        {
+          "name": "mediaweb",
+					"contextPath": "/medias"
+        },
+        {
+          "name": "yacceleratorstorefront",
+					"contextPath": ""
+        },
+        {
+          "name": "acceleratorservices",
+					"contextPath": "/acceleratorservices"
+        }
+          
     },
     {
       "name": "api",
